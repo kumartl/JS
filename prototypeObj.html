@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PROTOTYPE OBJECTS IN JS</h1>
+    <p id="demo"></p>
+    <script>
+        function Person(fname,lname,age){
+            this.fname1=fname;
+            this.lname1=lname;
+            this.age1=age;
+           // this.place1="chennaii";  instead of without using PROTOTYPE we can use this line (UPDATING after constructor fun created)
+        }
+        // Person.place="chennai";  this line wont be supported ,instead of we have to use the PROTOTYPE(UPDATING after constructor fun created)
+        Person.prototype.place="chennai";
+        const Myname=new Person("raja","rajan" , 30);
+
+        document.getElementById("demo").innerHTML= Myname.fname1 + "  " + Myname.lname1 +"  " + Myname.age1 + "  " + Myname.place1;
+
+    </script>
+</body>
+</html>
